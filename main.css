@@ -9,6 +9,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    background: #fff;
+    top: 0;
+    z-index: 1;
   }
 
   .header__logo {
@@ -41,8 +45,18 @@ header {
   .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
+    position:absolute;
+  }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
 
+  to {
+    transform:rotate(360deg);
+  }
+}
   .about__image {
     width: 500px;
   }
@@ -77,6 +91,7 @@ header {
   .about__info {
     max-width: 550px;
   }
+
   .form__container {
     width: 550px;
   }
@@ -117,20 +132,18 @@ header {
 
   .form label {
     font-size: 18px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
   }
 
-  .form input {
+  .form input, .form select {
     font-size: 18px;
     color: #213053;
-    border-radius: 10px;
-  }
-
-  .form select {
-    font-size: 18px;
-    color: #213053;
-    border-radius: 10px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 20px;
+    outline: none;
+    height: 60px;
   }
 
   .form__submit {
@@ -184,7 +197,7 @@ header {
     flex-direction: column;
   }
 
-  a {
+  .footer__links a {
     margin-bottom: 15px;
   }
 
